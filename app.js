@@ -15,7 +15,20 @@ exibirTextoNaTela('h1', 'Jogo Numero Secreto 2.0');
 exibirTextoNaTela('p','Escolha um número entre 1 e 10:');
 
 function verificarChute(){
-     console.log('Botão foi clicado!')
+    let chute = document.querySelector('input').value;
+     
+    if (chute==numeroSecreto){
+        exibirTextoNaTela('h1','Acertou!!!');
+        exibirTextoNaTela('p', 'Parabéns, você descobriu o número');
+    } else {
+        if(chute > numeroSecreto){
+            exibirTextoNaTela('h1', 'Não foi dessa vez :(');
+            exibirTextoNaTela('p', 'O número secreto é menor');
+        } else{
+            exibirTextoNaTela('h1', 'Não foi dessa vez :(');
+            exibirTextoNaTela('p','O número secreto é maior');
+        }
+    }
 }
 
 function gerarNumeroAleatorio() {
