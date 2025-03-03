@@ -4,6 +4,8 @@
 //let paragrafo = document.querySelector('p');
 //paragrafo.innerHTML = "Escolha um número entre 1 e 10:";
 
+let numeroSecreto = gerarNumeroAleatorio();
+
 function exibirTextoNaTela(tag, texto){
     let campo = document.querySelector(tag);
     campo.innerHTML= texto;
@@ -17,6 +19,6 @@ function verificarChute(){
 }
 
 function gerarNumeroAleatorio() {
-    parseInt(Math.random() * 10 +1);
+    return parseInt(Math.random() * 10 +1);
     
 }
