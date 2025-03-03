@@ -15,3 +15,8 @@ exibirTextoNaTela('p','Escolha um número entre 1 e 10:');
 function verificarChute(){
      console.log('Botão foi clicado!')
 }
+
+function gerarNumeroAleatorio() {
+    parseInt(Math.random() * 10 +1);
+    
+}
