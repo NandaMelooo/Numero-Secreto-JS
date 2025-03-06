@@ -4,6 +4,7 @@
 //let paragrafo = document.querySelector('p');
 //paragrafo.innerHTML = "Escolha um número entre 1 e 10:";
 let listaDeNumerosSorteados= [];
+let numeroLimite = 10;
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
 
@@ -14,7 +15,7 @@ function exibirTextoNaTela(tag, texto){
 
 function exibirMensagemInicial() {
     exibirTextoNaTela('h1', 'Jogo Numero Secreto 2.0');
-exibirTextoNaTela('p','Escolha um número entre 1 e 10:');
+    exibirTextoNaTela('p','Escolha um número entre 1 e 10:');
 }
 
 exibirMensagemInicial();
@@ -43,11 +44,17 @@ function verificarChute(){
 }
 
 function gerarNumeroAleatorio() {
-    let numeroEscolhido = parseInt(Math.random() * 10 +1);
+    let numeroEscolhido = parseInt(Math.random() * numeroLimite +1);
+    let quantidadeDeElementosSorteadosNaLista = listaDeNumerosSorteados.length;
+
+    if(quantidadeDeElementosSorteadosNaLista == numeroLimite){
+        listaDeNumerosSorteados[];
+    }
     if(listaDeNumerosSorteados.includes(numeroEscolhido)){
         return gerarNovoNumeroAleatorio();
     }else{
-        listaDeNumerosSorteados.push(numeroEscolhido)
+        listaDeNumerosSorteados.push(numeroEscolhido);
+        console.log(listaDeNumerosSorteados)
         return numeroEscolhido;
     }
     
