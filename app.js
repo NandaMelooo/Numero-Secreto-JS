@@ -11,6 +11,7 @@ let tentativas = 1;
 function exibirTextoNaTela(tag, texto){
     let campo = document.querySelector(tag);
     campo.innerHTML= texto;
+    responsive.Voice.speak(texto,'Brazilian Portuguese Female', {rate:1.2})
 }
 
 function exibirMensagemInicial() {
@@ -48,7 +49,7 @@ function gerarNumeroAleatorio() {
     let quantidadeDeElementosSorteadosNaLista = listaDeNumerosSorteados.length;
 
     if(quantidadeDeElementosSorteadosNaLista == numeroLimite){
-        listaDeNumerosSorteados[];
+        listaDeNumerosSorteados = [];
     }
     if(listaDeNumerosSorteados.includes(numeroEscolhido)){
         return gerarNovoNumeroAleatorio();
@@ -66,6 +67,8 @@ function limparCampo(){
     
 }
 
+limparCampo();
+
 function reiniciarJogo(){
     numeroSecreto = gerarNumeroAleatorio();
     limparCampo();
@@ -74,3 +77,5 @@ function reiniciarJogo(){
     document.getElementById('reiniciar').setAttribute('disabled',true);
 
 }
+
+reiniciarJogo();
